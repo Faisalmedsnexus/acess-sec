@@ -1,6 +1,8 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 
 export default function page() {
+    const [name, setName] = useState("");
     const avatars = [
         "/images/choose-avatar/girl_11.png",
         "/images/choose-avatar/girl_13.png",
@@ -27,10 +29,17 @@ export default function page() {
                             ))}
                         </div>
                     </div>
-                    <p className='text-[16px] font-bold text-[#000000] text-center py-5'>Choose your Nick Name</p>
+                    <p className='text-[16px] font-bold text-[#000000] text-center py-2 pt-5'>Choose your Nick Name</p>
+                    <input
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder={name ? "" : "Emile"}
+                        className="w-full h-12 px-4 py-2 my-2 border-2 border-[#FE8840] rounded-[25px] text-center placeholder:text-center focus:outline-none"
+                    />
                     <div className='flex flex-col md:flex-row items-center justify-center gap-2'>
-                    <img src="/images/choose-avatar/girl_14.png" alt="Farrukh" className="" />
-                    <p className='text-[14px] font-bold text-[#000000] text-center'>Wohoo! Emile Your Profile has been updated</p>
+                        <img src="/images/choose-avatar/girl_14.png" alt="Farrukh" className="" />
+                        <p className='text-[14px] font-bold text-[#000000] text-center'>Wohoo! Emile Your Profile has been updated</p>
                     </div>
                 </div>
             </div>
