@@ -779,7 +779,7 @@ export default function Welcome() {
       )}
       {selectedLevel === 5 && (
         <section className=" bg-[#f9f9f9]">
-          <div className="flex flex-col justify-center items-center my-[50px] p-[30px] w-[20%] m-auto gap-5 bg-[#ffffff]">
+          <div className="flex flex-col justify-center items-center my-[50px] px-[30px] md:w-[40%] m-auto gap-5 bg-[#ffffff]">
             <img
               src="/images/payment/true_icon.png"
               alt="Farrukh"
