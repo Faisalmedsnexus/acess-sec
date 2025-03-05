@@ -1,6 +1,16 @@
-import React from 'react'
+"use client";
+import React, { useRef, useState } from "react";
 
 export const Promotional = () => {
+    const videoRef = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const handlePlay = () => {
+        if (videoRef.current) {
+            videoRef.current.play();
+            setIsPlaying(true);
+        }
+    };
     return (
         <section className='flex flex-col items-center mt-[50px]'>
             <div className='flex flex-col justify-center'>
@@ -9,8 +19,28 @@ export const Promotional = () => {
                 <button className="primary-btn max-w-[500px] bg-[#FE8840] text-white my-5 px-[40px] py-3 rounded-[25px] cursor-pointer transition mx-auto">
                     Free Trial Lessons
                 </button>
+                <div className="relative w-[40%] m-auto">
+                    <video
+                        ref={videoRef}
+                        className="w-full border-[7px] border-[#FE8840] rounded-[20px]"
+                        controls
+                    >
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+
+                    {!isPlaying && (
+                        <button
+                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black/60 text-white text-3xl font-bold w-16 h-16 rounded-full transition-opacity duration-300 hover:bg-black/70 flex items-center justify-center"
+                            onClick={handlePlay}
+                        >
+                            ▶
+                        </button>
+                    )}
+                </div>
             </div>
-            <div className='flex flex-col sm:flex-row gap-5 py-3'>
+
+            <div className='flex flex-col sm:flex-row gap-5 py-3 mb-[50px]'>
                 <div className='flex flex-row items-center shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] p-3 rounded-3xl'>
                     <img
                         className='bg-[#F8F2FF] p-2 rounded-xl mr-2'
