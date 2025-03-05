@@ -618,8 +618,8 @@ export default function Welcome() {
 
       {selectedLevel === 4 && (
         <section className="px-[50px] md:px-[100px] lg:px-[200px] bg-[#ffffff] flex justify-center my-5">
-          <div className="flex flex-col justify-center items-center p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] w-[100%] xl:w-[50%] 2xl:w-[50%]">
-            <div className="bg-[#FFF3E9] sm:p-5 rounded-xl w-[300px]">
+          <div className="flex flex-col justify-center items-center p-2 sm:p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] w-[100%] xl:w-[50%] 2xl:w-[50%]">
+            <div className="bg-[#FFF3E9] sm:p-5 rounded-xl md:w-[300px]">
               <div className="flex flex-row gap-[40px] items-center">
                 <h1 className="text-[16px] font-bold text-[#000000]">Emile</h1>
                 <div className="flex flex-row bg-black border rounded-[25px] text-white p-1 items-center">
@@ -632,7 +632,7 @@ export default function Welcome() {
                   <span className="text-[7px] font-medium text-white">Home</span>
                 </div>
               </div>
-              <div className="w-[200px]">
+              <div className="md:w-[200px]">
                 <p className="text-[10px] font-medium text-[#6E6E6E]">
                   Laxmi Hospital, doddapete,kadur near chikkamagalur - 577548
                 </p>
@@ -648,7 +648,7 @@ export default function Welcome() {
                 Order Summary
               </h1>
               <div className="border border-[#D9D9D9] p-5 rounded-lg w-[100%]">
-                <div className="flex flex-row gap-[50px]">
+                <div className="flex flex-col sm:flex-row gap-[50px] justify-center items-center">
                   <div>
                     <img
                       className="!w-[170px] !h-[85px]"
@@ -685,7 +685,7 @@ export default function Welcome() {
                     />
                   </div>
                 </div>
-                <div className="flex flex-row mt-5 gap-[50px]">
+                <div className="flex flex-col sm:flex-row mt-5 gap-[50px] justify-center items-center">
                   <div>
                     <img
                       className="!w-[170px] !h-[85px]"
@@ -703,7 +703,7 @@ export default function Welcome() {
                       </p>
                     </div>
                     <div className="text-[16px] font-semibold text-[#525252] mt-5">
-                      $ 21.45
+                      $ 40.45
                     </div>
                   </div>
                   <div className="mt-2 shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)]">
