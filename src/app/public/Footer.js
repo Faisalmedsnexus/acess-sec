@@ -16,7 +16,7 @@ export const Footer = () => {
                             About Us
                         </button>
                         <button className="text-[26px] font-normal text-white ">
-                            contact Us
+                            Contact Us
                         </button>
                     </div>
                     <div className='max-w-[500px] md:max-w-[700px] px-5 text-white font-light text-[20px] text-center'>Lörem ipsum od ohet dilogi. Bell trabel, samuligt, ohöbel utom diska. Jinesade bel när feras redorade i belogi. FAR paratyp i muvåning, och pesask vyfisat. Viktiga poddradio har un mad och inde. </div>
