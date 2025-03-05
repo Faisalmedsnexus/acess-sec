@@ -619,27 +619,27 @@ export default function Welcome() {
       {selectedLevel === 4 && (
         <section className="px-[50px] md:px-[100px] lg:px-[200px] bg-[#ffffff] flex justify-center my-5">
           <div className="flex flex-col justify-center items-center p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] w-[100%] xl:w-[50%] 2xl:w-[50%]">
-            <div className="bg-[#FFF3E9] sm:p-5 rounded-xl">
+            <div className="bg-[#FFF3E9] sm:p-5 rounded-xl w-[300px]">
               <div className="flex flex-row gap-[40px] items-center">
-                <h1>Emile</h1>
-                <div className="flex flex-row bg-black border rounded-[25px] text-white p-1">
+                <h1 className="text-[16px] font-bold text-[#000000]">Emile</h1>
+                <div className="flex flex-row bg-black border rounded-[25px] text-white p-1 items-center">
                   <img
                     cal
                     src="/images/payment/home.png"
                     alt="Farrukh"
-                    className="w-5 h-5"
+                    className="w-[14px] h-[11px]"
                   />
-                  <span>Home</span>
+                  <span className="text-[7px] font-medium text-white">Home</span>
                 </div>
               </div>
-              <div className="w-[300px]">
-                <p className="text-[20px] font-medium text-[#6E6E6E]">
+              <div className="w-[200px]">
+                <p className="text-[10px] font-medium text-[#6E6E6E]">
                   Laxmi Hospital, doddapete,kadur near chikkamagalur - 577548
                 </p>
-                <span className="text-[20px] font-medium">+91 9754324564</span>
+                <span className="text-[10px] font-medium">+91 9754324564</span>
               </div>
               <div className="flex justify-end">
-                <span className="text-end font-bold">CHANGE</span>
+                <span className="text-end text-[12px] font-bold">CHANGE</span>
               </div>
             </div>
 
