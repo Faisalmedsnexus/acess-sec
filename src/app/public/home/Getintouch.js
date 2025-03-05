@@ -23,7 +23,7 @@ export const Getintouch = () => {
             <div className='border border-[#FE8840] m-[100px] p-[50px]' style={{ borderWidth: '3px' }}>
                 <div className='flex flex-row justify-center items-center'>
                     <img
-                        className='mr-[70px] w-[86px] h-[92px]'
+                        className='hidden md:block mr-[70px] w-[86px] h-[92px]'
                         src="/images/topstar.png"
                         alt="Acces"
                     />
@@ -33,7 +33,7 @@ export const Getintouch = () => {
                     </div>
                 </div>
                 <div className='flex justify-center items-center mt-[50px]'>
-                    <form onSubmit={handleSubmit} className="space-y-4 md:w-[70%] ml-[60px]">
+                    <form onSubmit={handleSubmit} className="space-y-4 md:w-[70%] md:ml-[60px]">
 
                         <div className="flex gap-4">
                             <input
@@ -87,7 +87,7 @@ export const Getintouch = () => {
                         </div>
                         <div className="flex justify-end">
                             <img
-                                className="w-[58px] h-[62px] mt-[-40px]"
+                                className="hidden md:block w-[58px] h-[62px] mt-[-40px]"
                                 src="/images/bottomstar.png"
                                 alt="Acces"
                             />
