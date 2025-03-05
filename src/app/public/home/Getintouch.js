@@ -20,7 +20,7 @@ export const Getintouch = () => {
 
     return (
         <section className='py-[50px]'>
-            <div className='border border-[#FE8840] m-[100px] p-[50px]' style={{ borderWidth: '3px' }}>
+            <div className='border border-[#FE8840] m-[20px] sm:m-[70px] md:m-[100px] p-[50px]' style={{ borderWidth: '3px' }}>
                 <div className='flex flex-row justify-center items-center'>
                     <img
                         className='hidden md:block mr-[70px] w-[86px] h-[92px]'
@@ -33,7 +33,7 @@ export const Getintouch = () => {
                     </div>
                 </div>
                 <div className='flex justify-center items-center mt-[50px]'>
-                    <form onSubmit={handleSubmit} className="space-y-4 md:w-[70%] md:ml-[60px]">
+                    <form onSubmit={handleSubmit} className="sm:space-y-4 md:w-[70%] md:ml-[60px]">
 
                         <div className="flex flex-col sm:flex-row gap-4">
                             <input
