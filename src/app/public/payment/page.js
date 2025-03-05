@@ -178,8 +178,10 @@ export default function Welcome() {
                 <p className="text-[22px] font-normal">TOTAL</p>
                 <p className="text-[22px] font-normal">$ 0.00</p>
               </div>
-              <p className="text-[14px] font-bold text-white bg-[#FE8840] text-center pl-3">
-                Cart Updated.
+              <p
+                onClick={() => setSelectedLevel(2)}
+                className="text-[14px] font-bold text-white bg-[#FE8840] text-center pl-3">
+                Checkout
               </p>
               <p className="text-[14px] font-normal pr-3 underline hover:no-underline text-right pt-2">
                 Enter a coupon code
@@ -294,7 +296,7 @@ export default function Welcome() {
                 <p className="text-[22px] font-normal">$ 0.00</p>
               </div>
               <p
-                onClick={() => setSelectedLevel(2)}
+
                 className="text-[14px] font-bold text-white bg-[#FE8840] text-center pl-3"
               >
                 Cart Updated.
@@ -778,8 +780,8 @@ export default function Welcome() {
         </section>
       )}
       {selectedLevel === 5 && (
-        <section className=" bg-[#f9f9f9]">
-          <div className="flex flex-col justify-center items-center my-[50px] px-[30px] md:w-[40%] m-auto gap-5 bg-[#ffffff]">
+        <section className=" bg-[#f9f9f9] py-[50px]">
+          <div className="flex flex-col justify-center items-center px-[30px] md:w-[40%] m-auto gap-5 bg-[#ffffff]">
             <img
               src="/images/payment/true_icon.png"
               alt="Farrukh"
