@@ -10,3 +10,7 @@ body {
 .primary-btn:hover {
   background-color: black;
 }
+
+*{
+  font-family: "Quicksand", sans-serif;
+}
