@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Header = () => {
     return (
-        <div className='flex flex-col sm:flex-row justify-between align-center items-center px-5'>
+        <div className='hidden md:flex flex-col sm:flex-row justify-between align-center items-center px-5'>
             <img
                 src="/images/logo.png"
                 alt="Acces"

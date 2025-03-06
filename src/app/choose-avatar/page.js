@@ -25,7 +25,7 @@ export default function page() {
                     <div className="flex justify-center">
                         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-center items-center'>
                             {avatars.map((avatar, index) => (
-                                <img key={index} src={avatar} alt={`Avatar ${index + 1}`} className="w-24 h-24 cursor-pointer rounded-full border-2 border-gray-300 hover:border-gray-500 transition" />
+                                <img key={index} src={avatar} alt={`Avatar ${index + 1}`} className="w-24 h-24 cursor-pointer  hover:border-gray-500 transition" />
                             ))}
                         </div>
                     </div>
@@ -42,6 +42,7 @@ export default function page() {
                         <p className='text-[14px] font-bold text-[#000000] text-center'>Wohoo! Emile Your Profile has been updated</p>
                     </div>
                 </div>
+                <h1 className="py-2 text-[40px] text-white">11111111111</h1>
             </div>
         </section>
     )
