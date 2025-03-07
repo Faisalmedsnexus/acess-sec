@@ -159,13 +159,13 @@ export default function page() {
           </div>
           <div className="items-center flex flex-col justify-center">
             <img src="/images/quiz/good.png" alt="Acces" className="" />
-            <div className="flex items-center justify-center relative">
-              {/* Back Button */}
-              <button className=" left-0 bg-black text-white px-4 py-2 rounded-[10px]">
+            <div className="flex items-center justify-center relative gap-[50px]">
+              
+              <button className=" left-1 bg-black text-white px-4 py-1 rounded-[10px]">
                 Back
               </button>
 
-              {/* Image with Centered Text */}
+              
               <div className="relative">
                 <img
                   src="/images/quiz/timer.png"
@@ -177,8 +177,8 @@ export default function page() {
                 </p>
               </div>
 
-              {/* Next Button */}
-              <button className=" right-0 bg-black text-white px-4 py-2 rounded-[10px]">
+              
+              <button className=" right-0 bg-black text-white px-4 py-1 rounded-[10px]">
                 Next
               </button>
             </div>
