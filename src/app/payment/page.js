@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const levels1 = [
@@ -90,7 +91,7 @@ const levels2 = [
     price: "$30",
   },
 ];
-export default function Welcome() {
+export default function Welcome({setActiveSection}) {
   const [selectedLevel, setSelectedLevel] = useState(1);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -180,7 +181,8 @@ export default function Welcome() {
               </div>
               <p
                 onClick={() => setSelectedLevel(2)}
-                className="text-[14px] font-bold text-white bg-[#FE8840] text-center pl-3">
+                className="text-[14px] font-bold text-white bg-[#FE8840] text-center pl-3"
+              >
                 Checkout
               </p>
               <p className="text-[14px] font-normal pr-3 underline hover:no-underline text-right pt-2">
@@ -295,10 +297,7 @@ export default function Welcome() {
                 <p className="text-[22px] font-normal">TOTAL</p>
                 <p className="text-[22px] font-normal">$ 0.00</p>
               </div>
-              <p
-
-                className="text-[14px] font-bold text-white bg-[#FE8840] text-center pl-3"
-              >
+              <p className="text-[14px] font-bold text-white bg-[#FE8840] text-center pl-3">
                 Cart Updated.
               </p>
               <p className="text-[14px] font-normal pr-3 underline hover:no-underline text-right pt-2">
@@ -562,12 +561,15 @@ export default function Welcome() {
                   >
                     Back
                   </button>
-                  <button
-                    onClick={() => setSelectedLevel(4)}
-                    className=" text-[#FE8840] transition cursor-pointer"
-                  >
-                    Next
-                  </button>
+                  <Link href="/order-summary">
+                    <button
+                      // onClick={() => setSelectedLevel(4)}
+                      // onClick={() => setActiveSection("order-summary")}
+                      className=" text-[#FE8840] transition cursor-pointer"
+                    >
+                      Next
+                    </button>
+                  </Link>
                 </div>
               </form>
             </div>
@@ -629,7 +631,9 @@ export default function Welcome() {
                     alt="Farrukh"
                     className="w-[14px] h-[11px]"
                   />
-                  <span className="text-[7px] font-medium text-white">Home</span>
+                  <span className="text-[7px] font-medium text-white">
+                    Home
+                  </span>
                 </div>
               </div>
               <div className="md:w-[200px]">

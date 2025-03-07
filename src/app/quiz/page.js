@@ -20,11 +20,11 @@ export default function page() {
     <>
       <section className="bg-[#f9f9f9] pb-5">
         <div className="bg-[#fff3e9] md:w-[70%] lg:w-[50%] m-auto ">
-          <h1 className="text-[40px] font-bold text-[#000000] text-center py-5">
+          <h1 className="text-[25px] md:text-[40px] font-poppins  font-bold text-[#000000] text-center py-5">
             Choose your favorite Avatar
           </h1>
           <div className="bg-white mx-[100px] m-auto p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] pb-[50px]">
-            <p className="text-[16px] font-bold text-[#000000] text-center py-5">
+            <p className="text-[16px] font-quicksand font-bold text-[#000000] text-center py-5">
               Choose your favorite avatar
             </p>
             <div className="flex justify-center">
@@ -39,7 +39,7 @@ export default function page() {
                 ))}
               </div>
             </div>
-            <p className="text-[16px] font-bold text-[#000000] text-center py-2 pt-5">
+            <p className="text-[16px] font-quicksand font-bold text-[#000000] text-center py-2 pt-5">
               Choose your Nick Name
             </p>
             <input
@@ -55,18 +55,18 @@ export default function page() {
                 alt="Farrukh"
                 className=""
               />
-              <p className="text-[14px] font-bold text-[#000000] text-center">
+              <p className="text-[14px] font-quicksand font-bold text-[#000000] text-center">
                 Wohoo! Emile Your Profile has been updated
               </p>
             </div>
           </div>
-          <h1 className="py-2 text-[40px] text-white">11111111111</h1>
+          <h1 className="py-2 text-[40px] text-white"></h1>
         </div>
       </section>
 
       <section className="bg-[#f9f9f9] pt-5">
         <div className="bg-[#fff3e9] md:w-[70%] lg:w-[50%] m-auto ">
-          <h1 className="text-[40px] font-bold text-[#000000] text-center py-5">
+          <h1 className="text-[25px] md:text-[40px] font-poppins  font-bold text-[#000000] text-center py-5">
             Levels
           </h1>
           <div className="flex flex-row gap-1 justify-center">
@@ -81,12 +81,12 @@ export default function page() {
             alt="Acces"
             className="max-w-[60%] m-auto my-5"
           />
-          <p className="text-[22px] font-bold text-[#000000] text-center py-5">
+          <p className="text-[18px] md:text-[22px] font-poppins  font-bold text-[#000000] text-center py-5">
             Current Level : 1
           </p>
           <div className="flex flex-row gap-1 justify-center items-center">
             <div className="border border-[#FE8840] rounded-xl py-2 px-5">
-              <h1 className="text-[22px] font-bold text-[#000000]">
+              <h1 className="text-[18px] md:text-[22px] font-poppins  font-bold text-[#000000]">
                 Choose Your Sections
               </h1>
               <div className="flex flex-row gap-2 justify-center mt-2">
@@ -99,7 +99,7 @@ export default function page() {
               </div>
             </div>
             <div className="border border-[#FE8840] rounded-xl py-2 px-5">
-              <h1 className="text-[22px] font-bold text-[#000000]">
+              <h1 className="text-[18px] md:text-[22px] font-poppins  font-bold text-[#000000]">
                 Choose Your Sections
               </h1>
               <div className="flex flex-row gap-2 justify-center mt-2">
@@ -113,15 +113,15 @@ export default function page() {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center mt-2">
-            <p className="text-[14px] font-normal">
-              Section Chosen : <span className="font-bold">Math</span>
+            <p className="text-[14px] font-quicksand font-normal">
+              Section Chosen : <span className="font-bold font-quicksand">Math</span>
             </p>
-            <p className="text-[14px] font-normal">
+            <p className="text-[14px] font-quicksand font-normal">
               Subsection Chosen : <span className="font-bold"> Algebra</span>
             </p>
           </div>
           <div className="bg-white mx-[100px] m-auto p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] pb-[50px] rounded-lg">
-            <p className="text-[22px] font-bold text-[#000000] text-center py-5">
+            <p className="text-[18px] md:text-[22px] font-poppins  font-bold text-[#000000] text-center py-5">
               What comes after 2 and before 4?
             </p>
             <img
@@ -130,20 +130,6 @@ export default function page() {
               className="max-w-[60%] m-auto my-5"
             />
           </div>
-          {/* <div className="bg-white mx-[100px] m-auto p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] pb-[50px] mt-5 rounded-lg mb-5 flex flex-col justify-center items-center">
-            <div className="flex flex-row gap-[80px]">
-              <h1 className="text-[30px] font-bold">A.) Zero</h1>
-              <img src="/images/quiz/image0.png" alt="Acces" className="w-[35px]" />
-            </div>
-            <div className="flex flex-row gap-[70px] transition duration-300 hover:bg-[#cde3ee] focus-within:bg-[#cde3ee] active:bg-[#cde3ee">
-              <h1 className="text-[30px] font-bold">B.) Three</h1>
-              <img src="/images/quiz/image3.png" alt="Acces" className="w-[35px]" />
-            </div>
-            <div className="flex flex-row gap-[90px]">
-              <h1 className="text-[30px] font-bold">C.) One</h1>
-              <img src="/images/quiz/image1.png" alt="Acces" className="w-[35px]" />
-            </div>
-          </div> */}
 
           <div className="bg-white mx-[100px] m-auto p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] pb-[50px] mt-5 rounded-lg mb-5 flex flex-col justify-center items-center">
             {[
@@ -197,10 +183,10 @@ export default function page() {
               </button>
             </div>
             <div className="mt-5">
-              <p className="text-[14px] font-medium text-center">
+              <p className="text-[14px] font-quicksand font-medium text-center">
                 Questions Attempted 50/50
               </p>
-              <h1 className="text-[22px] font-bold text-center mb-[50px]">
+              <h1 className="text-[18px] md:text-[22px] font-poppins  font-bold text-center mb-[50px]">
                 Congratulations Level 1 Completed
               </h1>
             </div>

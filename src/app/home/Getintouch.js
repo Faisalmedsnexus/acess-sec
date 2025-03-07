@@ -28,8 +28,8 @@ export const Getintouch = () => {
                         alt="Acces"
                     />
                     <div>
-                        <p className='text-[20px] font-bold text-[#FE8840] text-center'>GET IN TOUCH</p>
-                        <h1 className='text-[40px] font-bold text-center ml-[-10px]'>Needs Help? Let’s Get in Touch</h1>
+                        <p className='text-[16px] md:text-[20px] font-quicksand font-bold text-[#FE8840] text-center'>GET IN TOUCH</p>
+                        <h1 className='text-[25px] md:text-[40px] font-poppins  font-bold text-center ml-[-10px]'>Needs Help? Let’s Get in Touch</h1>
                     </div>
                 </div>
                 <div className='flex justify-center items-center mt-[50px]'>
@@ -80,7 +80,7 @@ export const Getintouch = () => {
                         <div className="flex justify-center">
                             <button
                                 type="submit"
-                                className="primary-btn bg-[#FE8840] text-white p-3 rounded-[25px] cursor-pointer transition"
+                                className="primary-btn font-roboto bg-[#FE8840] text-white p-3 rounded-[25px] cursor-pointer transition"
                             >
                                 Get In Touch With Us
                             </button>

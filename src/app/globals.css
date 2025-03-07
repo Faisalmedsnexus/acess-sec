@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 body {
   color: var(--foreground);
   background: var(--background);
@@ -11,6 +10,12 @@ body {
   background-color: black;
 }
 
-*{
-  font-family: "Quicksand", sans-serif;
+.font-poppins {
+  font-family: "Poppins";
+}
+.font-quicksand {
+  font-family: "Quicksand";
+}
+.font-roboto {
+  font-family: "Roboto";
 }

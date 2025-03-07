@@ -7,7 +7,7 @@ export const TopMenue = ({ setActiveSection }) => {
   return (
     <div className="">
       <div className="md:hidden flex justify-between items-center p-4">
-        <img src="/images/logo.png" alt="Acces" />
+        <img src="/images/logo.png" alt="Acces" className="w-[70px] h-[70px]"/>
         <button onClick={() => setIsOpen(!isOpen)} className="">
           {isOpen ? <X size={30} /> : <Menu size={30} />}
         </button>
@@ -18,41 +18,44 @@ export const TopMenue = ({ setActiveSection }) => {
           isOpen ? "flex" : "hidden"
         } md:flex flex-col md:flex-row gap-5 md:gap-[50px] justify-center items-center md:items-center bg-black`}
       >
-        <Link href="/access-simulator" className="inline-block">
+        <Link href="/choose-avatar" className="inline-block">
           <button
             onClick={() => setActiveSection("choose-avatar")}
-            className="text-[26px] font-normal text-white cursor-pointer"
+            className="text-[18px] md:text-[26px] font-normal text-white cursor-pointer font-quicksand"
           >
             Free Simulator
           </button>
         </Link>
-        <button
-          onClick={() => setActiveSection("access-simulator")}
-          className="text-[26px] font-normal text-white cursor-pointer"
-        >
-          Access Simulator
-        </button>
+        <Link href="/access-simulator" className="inline-block">
+          <button
+            onClick={() => setActiveSection("access-simulator")}
+            className="text-[18px] md:text-[26px]  font-normal text-white cursor-pointer font-quicksand"
+          >
+            Access Simulator
+          </button>
+        </Link>
         <Link href="/payment" className="inline-block">
           <button
             onClick={() => setActiveSection("products")}
-            className="text-[26px] font-normal text-white cursor-pointer"
+            className="text-[18px] md:text-[26px] font-normal text-white cursor-pointer font-quicksand"
           >
             Products
           </button>
         </Link>
         <button
-         onClick={() => setActiveSection("quiz")}
-         className="text-[26px] font-normal text-white cursor-pointer">
+          onClick={() => setActiveSection("quiz")}
+          className="text-[18px] md:text-[26px] font-normal text-white cursor-pointer font-quicksand"
+        >
           About Us
         </button>
-        <button className="text-[26px] font-normal text-white cursor-pointer">
+        <button className="text-[18px] md:text-[26px] font-normal text-white cursor-pointer font-quicksand">
           Contact Us
         </button>
 
-        <button className="md:hidden text-[26px] font-normal text-white cursor-pointer">
+        <button className="md:hidden text-[18px] md:text-[26px] font-normal text-white cursor-pointer font-quicksand">
           Free Trail
         </button>
-        <button className="md:hidden text-[26px] font-normal text-white cursor-pointer">
+        <button className="md:hidden text-[18px] md:text-[26px] font-normal text-white cursor-pointer font-quicksand">
           Login
         </button>
       </div>

@@ -37,14 +37,14 @@ export const FrequentlyQuestions = () => {
   return (
     <section className='py-5 px-5 md:px-[200px] flex flex-col md:flex-row'>
       <div className='md:w-[30%]'>
-        <h1 className='text-[40px] font-bold'>Frequently Asked Questions</h1>
+        <h1 className='text-[25px] md:text-[40px] font-poppins  font-bold'>Frequently Asked Questions</h1>
       </div>
       <div className='flex flex-col md:w-[70%]'>
         {faqData.map((item, index) => (
           <div key={index} className="md:ml-[100px]  mb-4">
             <div className="border-b border-[#e7e9eb] py-5">
               <div className="flex flex-row justify-between items-center">
-                <h1 className="text-[22px] font-bold flex-grow pr-4">{item.question}</h1>
+                <h1 className="text-[18px] md:text-[22px] font-poppins  font-bold flex-grow pr-4">{item.question}</h1>
                 <img
                   onClick={() => toggleFAQ(index)}
                   src={openIndex === index ? "/images/minus_btn.png" : "/images/plus_btn.png"}
@@ -53,7 +53,7 @@ export const FrequentlyQuestions = () => {
                 />
               </div>
               {openIndex === index && (
-                <p className="max-w-[700px] text-[14px] font-normal py-5 text-[#0D1216]">
+                <p className="font-quicksand max-w-[700px] text-[14px] font-normal py-5 text-[#0D1216]">
                   {item.answer}
                 </p>
               )}
