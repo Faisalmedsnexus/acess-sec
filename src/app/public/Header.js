@@ -8,9 +8,9 @@ export const Header = () => {
                 alt="Acces"
             />
             <div className='flex flex-row h-[60px] md:h-[50px] gap-3 pr-[50px] mb-5 md:mb-0'>
-                <button className=" text-[#0772AA] px-[40px] py-3 border border-[#0772AA] rounded-[25px] cursor-pointer transition">
+                {/* <button className=" text-[#0772AA] px-[40px] py-3 border border-[#0772AA] rounded-[25px] cursor-pointer transition">
                     Free Trial
-                </button>
+                </button> */}
                 <button className="primary-btn bg-[#FE8840] text-white px-[60px] py-3 rounded-[25px] cursor-pointer transition">
                     Login
                 </button>

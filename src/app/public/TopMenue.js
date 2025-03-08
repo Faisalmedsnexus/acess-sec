@@ -7,7 +7,7 @@ export const TopMenue = ({ setActiveSection }) => {
   return (
     <div className="">
       <div className="md:hidden flex justify-between items-center p-4">
-        <img src="/images/logo.png" alt="Acces" className="w-[70px] h-[70px]"/>
+        <img src="/images/logo.png" alt="Acces" />
         <button onClick={() => setIsOpen(!isOpen)} className="">
           {isOpen ? <X size={30} /> : <Menu size={30} />}
         </button>
