@@ -66,7 +66,7 @@ export default function page() {
 
       <section className="bg-[#f9f9f9] pt-5">
         <div className="bg-[#fff3e9] md:w-[70%] lg:w-[50%] m-auto ">
-          <h1 className="text-[25px] md:text-[40px] font-poppins  font-bold text-[#000000] text-center py-5">
+          {/* <h1 className="text-[25px] md:text-[40px] font-poppins  font-bold text-[#000000] text-center py-5">
             Levels
           </h1>
           <div className="flex flex-row gap-1 justify-center">
@@ -80,8 +80,8 @@ export default function page() {
             src="/images/quiz/stepper.png"
             alt="Acces"
             className="max-w-[60%] m-auto my-5"
-          />
-          <p className="text-[18px] md:text-[22px] font-poppins  font-bold text-[#000000] text-center py-5">
+          /> */}
+          {/* <p className="text-[18px] md:text-[22px] font-poppins  font-bold text-[#000000] text-center py-5">
             Current Level : 1
           </p>
           <div className="flex flex-row gap-1 justify-center items-center">
@@ -119,7 +119,7 @@ export default function page() {
             <p className="text-[14px] font-quicksand font-normal">
               Subsection Chosen : <span className="font-bold"> Algebra</span>
             </p>
-          </div>
+          </div> */}
           <div className="bg-white mx-[100px] m-auto p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] pb-[50px] rounded-lg">
             <p className="text-[18px] md:text-[22px] font-poppins  font-bold text-[#000000] text-center py-5">
               What comes after 2 and before 4?
