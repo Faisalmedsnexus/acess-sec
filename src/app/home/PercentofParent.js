@@ -7,7 +7,7 @@ export const PercentofParent = () => {
         <h1 className='text-[25px] md:text-[40px] font-poppins font-bold text-white text-center'>95% of parents said their children enjoy using Acces-Sec</h1>
       </div>
       <div className='flex flex-col md:flex-row justify-center items-center m-auto gap-5 py-5'>
-        <div className='max-w-[90%] md:max-w-[20%] bg-white rounded-3xl py-5 px-5 flex flex-col '>
+        <div className='max-w-[90%] md:max-w-[30%] bg-white rounded-3xl py-5 px-5 flex flex-col '>
           <img
             className='w-[40px] h-[30px]'
             src="/images/percentage_parent.png"
@@ -24,7 +24,7 @@ export const PercentofParent = () => {
           </div>
         </div>
 
-        <div className='max-w-[90%] md:max-w-[20%] bg-white rounded-3xl py-5 px-5 flex flex-col '>
+        <div className='max-w-[90%] md:max-w-[30%] bg-white rounded-3xl py-5 px-5 flex flex-col '>
           <img
             className='w-[40px] h-[30px]'
             src="/images/percentage_parent.png"
@@ -41,7 +41,7 @@ export const PercentofParent = () => {
           </div>
         </div>
 
-        <div className='max-w-[90%] md:max-w-[20%] bg-white rounded-3xl py-5 px-5 flex flex-col '>
+        <div className='max-w-[90%] md:max-w-[30%] bg-white rounded-3xl py-5 px-5 flex flex-col '>
           <img
             className='w-[40px] h-[30px]'
             src="/images/percentage_parent.png"

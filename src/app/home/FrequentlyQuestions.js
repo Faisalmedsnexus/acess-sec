@@ -36,10 +36,10 @@ export const FrequentlyQuestions = () => {
 
   return (
     <section className='py-5 px-5 md:px-[200px] flex flex-col md:flex-row'>
-      <div className='md:w-[30%]'>
+      <div className='md:w-[35%]'>
         <h1 className='text-[25px] md:text-[40px] font-poppins  font-bold'>Frequently Asked Questions</h1>
       </div>
-      <div className='flex flex-col md:w-[70%]'>
+      <div className='flex flex-col md:w-[65%]'>
         {faqData.map((item, index) => (
           <div key={index} className="md:ml-[100px]  mb-4">
             <div className="border-b border-[#e7e9eb] py-5">
