@@ -1,12 +1,23 @@
-import React from "react";
+"use client"
+
+import React, { useState } from "react";
+import { UserAuthContext } from "../contexts/auth-context";
+import { DictionariesContext } from "../contexts/dictionary-context";
+
 
 export const Hero = ({ activeSection }) => {
+  const { lng } = UserAuthContext();
+  const { dictionaries } = DictionariesContext();
+
+  console.log(dictionaries,"dictionaries")
+  console.log(lng,"lng")
+ 
+  const [isLoading, setIsLoading] = useState(true); // Loading state
   return (
     <div>
       <img src="/images/herosection_bgtop.png" alt="Farrukh" className="w-[100%]" />
       <div
-        className="flex flex-col md:flex-row gap-5 max-w-[75%] mx-auto justify-center 
-      "
+        className="flex flex-col md:flex-row gap-5 max-w-[75%] mx-auto justify-center"
       >
         {activeSection === "products" ? (
           <>
@@ -70,7 +81,7 @@ export const Hero = ({ activeSection }) => {
           <>
             <div className="md:w-[70%] ">
               <h1 className="font-bold font-quicksand text-[30px] md:text-[50px] font-quicksand md:text-left text-center">
-                Knowledge Connection Open the Door to the Future
+                {dictionaries?.Home_Page_Hero_Section_Title}
               </h1>
               <p className="!font-normal font-quicksand text-[18px] md:text-[26px] md:text-left text- text-[#1F1C14]">
                 Giving every student the opportunity to access the best
