@@ -24,12 +24,12 @@ export default function page() {
         <h1 className="text-[25px] md:text-[40px] font-poppins  font-bold text-[#000000] text-center py-5">
           Welcome Student!
         </h1>
-        <div className="bg-white mx-[100px] m-auto p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] pb-[50px]">
+        <div className="bg-white mx-[40px] md:mx-[100px] m-auto p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] pb-[50px]">
           <p className="text-[16px] font-quicksand font-bold text-[#000000] text-center py-5">
             Choose your favorite avatar
           </p>
           <div className="flex justify-center">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-center items-center">
+            <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-center items-center">
               {avatars.map((avatar, index) => (
                 <img
                   key={index}

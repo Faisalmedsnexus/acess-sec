@@ -22,7 +22,7 @@ export const Getintouch = () => {
     <>
       <section className="py-[50px]">
         <div
-          className="border border-[#FE8840] m-[20px] sm:m-[70px] md:m-[100px] p-[50px]"
+          className="border border-[#FE8840] m-[20px] sm:m-[70px] md:m-[100px] p-5 md:p-[50px]"
           style={{ borderWidth: "3px" }}
         >
           <div className="flex flex-row justify-center items-center">

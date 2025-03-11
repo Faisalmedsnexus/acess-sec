@@ -6,7 +6,7 @@ export default function page() {
   const [code, setCode] = useState("");
   const [isChecked, setIsChecked] = useState(false);
   return (
-    <section className="bg-[#f9f9f9] pb-5">
+    <section className="bg-[#f9f9f9] pb-5 p-5">
       <div className="bg-white md:w-[70%] lg:w-[50%] m-auto my-5 p-5 flex flex-col justify-center items-center shadow-lg shadow-[#00000040] rounded-lg">
         <div className=" flex flex-col md:flex-row justify-center items-center">
           <div>

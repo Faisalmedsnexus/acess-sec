@@ -86,12 +86,12 @@ export default function page() {
           <h1 className="text-[25px] md:text-[40px] font-poppins  font-bold text-[#000000] text-center py-5">
             Choose your favorite Avatar
           </h1>
-          <div className="bg-white mx-[100px] m-auto p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] pb-[50px]">
+          <div className="bg-white mx-5 md:mx-[100px] m-auto p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] pb-[50px]">
             <p className="text-[16px] font-quicksand font-bold text-[#000000] text-center py-5">
               Choose your favorite avatar
             </p>
             <div className="flex justify-center">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-center items-center">
+              <div className="grid grid-cols-3 lg:grid-cols-5 gap-4 justify-center items-center">
                 {avatars.map((avatar, index) => (
                   <img
                     key={index}
@@ -127,7 +127,7 @@ export default function page() {
         </div>
       </section>
 
-      <section className="bg-[#f9f9f9] pt-5">
+      <section className="bg-[#f9f9f9] py-5">
         <div className="bg-[#fff3e9] md:w-[70%] lg:w-[50%] m-auto ">
           {/* <h1 className="text-[25px] md:text-[40px] font-poppins  font-bold text-[#000000] text-center py-5">
             Levels
@@ -183,7 +183,7 @@ export default function page() {
               Subsection Chosen : <span className="font-bold"> Algebra</span>
             </p>
           </div> */}
-          <div className="bg-white mx-[100px] m-auto p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] pb-[50px] rounded-lg text-center">
+          <div className="bg-white mx-5 md:mx-[100px] m-auto p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] pb-[50px] rounded-lg text-center">
             {quizCompleted ? (
               <div>
                 <h1 className="text-2xl font-bold">Quiz Completed!</h1>
@@ -205,7 +205,7 @@ export default function page() {
                   {questions[currentQuestion].question}
                 </p>
 
-                <div className="bg-white mx-[100px] m-auto p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] pb-[50px] mt-5 rounded-lg mb-5 flex flex-col justify-center items-center">
+                <div className="bg-white m-auto p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] pb-[50px] mt-5 rounded-lg mb-5 flex flex-col justify-center items-center">
                   {questions[currentQuestion].options.map((option, index) => (
                     <div
                       key={option}
