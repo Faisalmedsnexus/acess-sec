@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import "./globals.css";
 import { Suspense, useState } from "react";
 
@@ -11,7 +11,6 @@ import { TopMenue } from "./public/TopMenue";
 import { Footer } from "./public/Footer";
 import { Hero } from "./public/Hero";
 
-
 export default function RootLayout({ children }) {
   const [activeSection, setActiveSection] = useState("default");
   return (
@@ -19,14 +18,22 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/fav.png" type="image/x-icon" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
           rel="stylesheet"
         />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap"
           rel="stylesheet"
@@ -47,7 +54,6 @@ export default function RootLayout({ children }) {
           <QueryProvider>
             <AuthContextProvider>
               <DictionaryContextProvider>
-                
                 <main>
                   <Suspense
                     fallback={
@@ -57,8 +63,8 @@ export default function RootLayout({ children }) {
                     }
                   >
                     <Header />
-                <TopMenue setActiveSection={setActiveSection} />
-                <Hero setActiveSection={setActiveSection}/>
+                    <TopMenue setActiveSection={setActiveSection} />
+                    <Hero activeSection={activeSection} />
                     {children}
                   </Suspense>
                 </main>

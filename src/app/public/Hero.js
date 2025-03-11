@@ -11,15 +11,14 @@ export const Hero = ({ activeSection }) => {
 
   console.log(dictionaries,"dictionaries")
   console.log(lng,"lng")
- 
-  const [isLoading, setIsLoading] = useState(true); // Loading state
+ console.log(activeSection, ": avtice")
   return (
     <div>
       <img src="/images/herosection_bgtop.png" alt="Farrukh" className="w-[100%]" />
       <div
         className="flex flex-col md:flex-row gap-5 max-w-[75%] mx-auto justify-center mb-[-60px]"
       >
-        {activeSection === "products" ? (
+        {activeSection == "products" ? (
           <>
             <div className="md:w-[70%] flex items-center">
               <h1 className="font-bold text-[30px] md:text-[50px] font-quicksand items-center">
@@ -30,7 +29,7 @@ export const Hero = ({ activeSection }) => {
               <img src="/images/hero_one.png" alt="Farrukh" className="" />
             </div>
           </>
-        ) : activeSection === "choose-avatar" ? (
+        ) : activeSection == "choose-avatar" ? (
           <>
             <div className="md:w-[55%] flex items-center">
               <h1 className="font-bold text-[30px] md:text-[50px] font-quicksand items-center">
@@ -55,7 +54,7 @@ export const Hero = ({ activeSection }) => {
               />
             </div>
           </>
-        ) : activeSection === "access-simulator" ? (
+        ) : activeSection == "access-simulator" ? (
           <>
             <div className="md:w-[70%] flex items-center">
               <h1 className="font-bold text-[30px] md:text-[50px] font-quicksand items-center">
@@ -66,7 +65,7 @@ export const Hero = ({ activeSection }) => {
               <img src="/images/hero_one.png" alt="Farrukh" className="" />
             </div>
           </>
-        ) : activeSection === "quiz" ? (
+        ) : activeSection == "quiz" ? (
           <>
             <div className="md:w-[70%] flex items-center">
               <h1 className="font-bold text-[30px] md:text-[50px] font-quicksand items-center">
