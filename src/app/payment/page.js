@@ -115,7 +115,7 @@ export default function Welcome({setActiveSection}) {
       {selectedLevel === 1 && (
         <section className="px-[50px] md:px-[100px] lg:px-[200px] bg-[#f9f9f9] pb-5">
           <h1 className="text-[40px] font-bold py-5">Level 1</h1>
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row justify-center items-center md:items-start">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {levels1.map((level) => (
                 <div key={level.id} className="bg-[#cde3ee] m-3 rounded-2xl">
@@ -192,7 +192,7 @@ export default function Welcome({setActiveSection}) {
           </div>
 
           <h1 className="text-[40px] font-bold py-5">Level 2</h1>
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row justify-center items-center md:items-start">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {levels2.map((level) => (
                 <div key={level.id} className="bg-[#cde3ee] m-3 rounded-2xl">

@@ -18,17 +18,19 @@ export const TopMenue = ({ setActiveSection }) => {
           isOpen ? "flex" : "hidden"
         } md:flex flex-col md:flex-row gap-5 md:gap-[50px] justify-center items-center md:items-center bg-black`}
       >
-        <Link href="/choose-avatar" className="inline-block">
+        <Link href="/quiz" className="inline-block">
           <button
-            onClick={() => setActiveSection("choose-avatar")}
+            onClick={() => setActiveSection("quiz")}
+            //
             className="text-[18px] md:text-[26px] font-normal text-white cursor-pointer font-quicksand"
           >
             Free Simulator
           </button>
         </Link>
-        <Link href="/access-simulator" className="inline-block">
+        <Link href="/choose-avatar" className="inline-block">
           <button
-            onClick={() => setActiveSection("access-simulator")}
+            onClick={() => setActiveSection("choose-avatar")}
+            // onClick={() => setActiveSection("access-simulator")}
             className="text-[18px] md:text-[26px]  font-normal text-white cursor-pointer font-quicksand"
           >
             Access Simulator

@@ -25,17 +25,17 @@ export const Promotional = () => {
         <button className="primary-btn font-quicksand max-w-[500px] bg-[#FE8840] text-white my-5 px-[40px] py-3 rounded-[25px] cursor-pointer transition mx-auto">
           Free Trial Lessons
         </button>
-        <div className="relative md:w-[40%] m-auto">
-          {/* Image positioned outside the video frame, top-right corner, behind the video */}
-          {/* <img
-            className="absolute top-[-25%] right-[-20%] w-[30%] h-auto bg-[#F8F2FF] p-2 rounded-xl z-0"
+        <div className="relative md:w-[70%] m-auto">
+          
+          <img
+            className="absolute top-[-23%] right-[-15%] w-[30%] h-auto p-2 rounded-xl z-[-1]"
             src="/images/videoimg.png"
             alt="Acces"
-          /> */}
+          />
 
           <video
             ref={videoRef}
-            className="w-full border-[7px] border-[#FE8840] rounded-[20px] z-10" // Video in front of the image
+            className="w-full border-[7px] border-[#FE8840] rounded-[20px] z-[1]" // Video in front of the image
             controls
           >
             <source

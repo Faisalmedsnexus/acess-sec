@@ -17,7 +17,7 @@ export const Hero = ({ activeSection }) => {
     <div>
       <img src="/images/herosection_bgtop.png" alt="Farrukh" className="w-[100%]" />
       <div
-        className="flex flex-col md:flex-row gap-5 max-w-[75%] mx-auto justify-center"
+        className="flex flex-col md:flex-row gap-5 max-w-[75%] mx-auto justify-center mb-[-60px]"
       >
         {activeSection === "products" ? (
           <>
