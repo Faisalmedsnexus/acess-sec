@@ -49,6 +49,7 @@ export default function page() {
   const [score, setScore] = useState(0);
   const [timer, setTimer] = useState(60);
   const [quizCompleted, setQuizCompleted] = useState(false);
+  const [selectedAvatar, setSelectedAvatar] = useState(avatars[0]);
 
   useEffect(() => {
     if (timer > 0) {
@@ -84,20 +85,21 @@ export default function page() {
       <section className="bg-[#f9f9f9] pb-5">
         <div className="bg-[#fff3e9] md:w-[70%] lg:w-[50%] m-auto ">
           <h1 className="text-[25px] md:text-[40px] font-poppins  font-bold text-[#000000] text-center py-5">
-            Choose your favorite Avatar
+            Welcome Student!
           </h1>
-          <div className="bg-white mx-5 md:mx-[100px] m-auto p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] pb-[50px]">
+          <div className="bg-white mx-[40px] md:mx-[100px] m-auto p-5 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] pb-[50px]">
             <p className="text-[16px] font-quicksand font-bold text-[#000000] text-center py-5">
               Choose your favorite avatar
             </p>
             <div className="flex justify-center">
-              <div className="grid grid-cols-3 lg:grid-cols-5 gap-4 justify-center items-center">
+              <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-center items-center">
                 {avatars.map((avatar, index) => (
                   <img
                     key={index}
                     src={avatar}
                     alt={`Avatar ${index + 1}`}
-                    className="w-24 h-24 cursor-pointer hover:border-gray-500 transition"
+                    className="w-24 h-24 cursor-pointer  hover:border-gray-500 transition"
+                    onClick={() => setSelectedAvatar(avatar)}
                   />
                 ))}
               </div>
@@ -113,17 +115,12 @@ export default function page() {
               className="w-full h-12 px-4 py-2 my-2 border-2 border-[#FE8840] rounded-[25px] text-center placeholder:text-center focus:outline-none"
             />
             <div className="flex flex-col md:flex-row items-center justify-center gap-2">
-              <img
-                src="/images/choose-avatar/girl_14.png"
-                alt="Farrukh"
-                className=""
-              />
+              <img src={selectedAvatar} alt="Farrukh" className="" />
               <p className="text-[14px] font-quicksand font-bold text-[#000000] text-center">
                 Wohoo! Emile Your Profile has been updated
               </p>
             </div>
           </div>
-          <h1 className="py-2 text-[40px] text-white"></h1>
         </div>
       </section>
 
@@ -210,11 +207,10 @@ export default function page() {
                     <div
                       key={option}
                       onClick={() => setSelected(option)}
-                      className={`flex flex-row gap-[50px] mt-1 rounded-md transition duration-300 cursor-pointer ${
-                        selected === option
+                      className={`flex flex-row gap-[50px] mt-1 rounded-md transition duration-300 cursor-pointer ${selected === option
                           ? "bg-[#cde3ee]"
                           : "hover:bg-[#cde3ee]"
-                      } items-center p-3`}
+                        } items-center p-3`}
                     >
                       <h1 className="text-[30px] font-bold">
                         {String.fromCharCode(65 + index)}.) {option}
