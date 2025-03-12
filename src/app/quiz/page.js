@@ -193,7 +193,7 @@ export default function page() {
                   className="m-auto mt-5"
                 />
                 <h1 className="text-[18px] md:text-[22px] font-poppins font-bold text-center mt-3">
-                  Congratulations! Level 1 Completed
+                {score >= 7 ? "Congratulations, you did well!" : "You must try again, you can do it!"}
                 </h1>
               </div>
             ) : (
@@ -208,8 +208,8 @@ export default function page() {
                       key={option}
                       onClick={() => setSelected(option)}
                       className={`flex flex-row gap-[50px] mt-1 rounded-md transition duration-300 cursor-pointer ${selected === option
-                          ? "bg-[#cde3ee]"
-                          : "hover:bg-[#cde3ee]"
+                        ? "bg-[#cde3ee]"
+                        : "hover:bg-[#cde3ee]"
                         } items-center p-3`}
                     >
                       <h1 className="text-[30px] font-bold">
@@ -251,9 +251,8 @@ export default function page() {
                   </div>
 
                   <div className="mt-5">
-                    <p className="text-[14px] font-quicksand font-medium text-center">
-                      Questions Attempted {currentQuestion + 1}/
-                      {questions.length}
+                    <p className="text-[14px] font-quicksand font-semibold text-center">
+                      Question {currentQuestion + 1} of {questions.length}
                     </p>
                   </div>
                 </div>

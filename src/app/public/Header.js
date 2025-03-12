@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Header = () => {
     return (
-        <div className='hidden md:flex flex-col sm:flex-row justify-between align-center items-center px-5'>
+        <div className='hidden md:flex flex-col sm:flex-row justify-between align-center items-center px-5 2xl:h-[150px]'>
             <img
                 width={110}
                 height={110}
