@@ -9,7 +9,7 @@ export const Hero = ({ activeSection }) => {
   const { lng } = UserAuthContext();
   const { dictionaries } = DictionariesContext();
 
-  console.log(dictionaries,"dictionaries")
+
   console.log(lng,"lng")
  console.log(activeSection, ": avtice")
   return (
@@ -83,8 +83,7 @@ export const Hero = ({ activeSection }) => {
                 {dictionaries?.Home_Page_Hero_Section_Title}
               </h1>
               <p className="!font-normal font-quicksand text-[18px] md:text-[26px] md:text-left text- text-[#1F1C14]">
-                Giving every student the opportunity to access the best
-                education.
+              {dictionaries?.Home_Page_Hero_Section_Description}
               </p>
               <div className="flex flex-row items-center my-5">
                 <p className="text-[14px] font-normal text-[#0D1216] font-quicksand md:text-left text-center">

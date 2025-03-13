@@ -1,6 +1,11 @@
+"use client"
 import React from "react";
+import { UserAuthContext } from "../contexts/auth-context";
+import { DictionariesContext } from "../contexts/dictionary-context";
 
 export const WhyChoose = () => {
+   const { lng } = UserAuthContext();
+    const { dictionaries } = DictionariesContext();
   return (
     <section className=" bg-[#398EBB] w-[100%]">
       <div className="">
@@ -9,7 +14,8 @@ export const WhyChoose = () => {
       <div className="flex flex-col items-center">
         <div className="py-5">
           <h1 className="font-poppins text-[25px] md:text-[40px] font-bold text-white text-center">
-            Why Choose Acces-Sec
+           
+            {dictionaries?.Why_Choose_Acces_Sec}
           </h1>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center m-auto gap-5 py-5">
@@ -20,12 +26,10 @@ export const WhyChoose = () => {
               alt="Acces"
             />
             <h1 className="text-[18px] md:text-[22px] font-bold pt-5 font-poppins">
-              Experienced teacher
+            {dictionaries?.Experienced_teacher}
             </h1>
             <p className="text-[16px] md:text-[20px] font-quicksand font-normal text-[#62605b] py-5">
-              Instructors from all over Vietnam and around the world, providing
-              quality learning experiences and helping students develop their
-              full potential
+            {dictionaries?.Instructors_from_all_over_Vietnam_and_around_the_world_providing_quality_learning_experiences_and_helping_students_develop_their_full_potential}
             </p>
           </div>
           <div className="max-w-[90%] md:w-[350px] lg:w-[400px] md:p-[26px] md:h-[658px] lg:h-[480px] bg-white rounded-xl  text-center border border-[#FE8840] flex flex-col items-center">
@@ -35,7 +39,7 @@ export const WhyChoose = () => {
               alt="Acces"
             />
             <h1 className="text-[18px] md:text-[22px] font-bold px-5 pt-5 font-poppins">
-              Creative program
+            {dictionaries?.Creative_program}
             </h1>
             <p className="text-[16px] md:text-[20px] font-quicksand  font-normal text-[#62605b] py-5 px-5">
               Flexible payment, suitable to personal financial situation and
