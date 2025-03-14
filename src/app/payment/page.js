@@ -14,37 +14,10 @@ const levels1 = [
     id: 2,
     image: "/images/payment/level_11.png",
     title: "Level 1",
-    subject: "SCIENCE",
-    price: "$25",
-  },
-  {
-    id: 3,
-    image: "/images/payment/level_11.png",
-    title: "Level 1",
-    subject: "ENGLISH",
-    price: "$30",
-  },
-  {
-    id: 4,
-    image: "/images/payment/level_12.png",
-    title: "Level 1",
-    subject: "FRENCH",
-    price: "$19",
-  },
-  {
-    id: 5,
-    image: "/images/payment/level_12.png",
-    title: "Level 1",
     subject: "FRENCH",
     price: "$25",
   },
-  {
-    id: 6,
-    image: "/images/payment/level_12.png",
-    title: "Level 1",
-    subject: "FRENCH",
-    price: "$30",
-  },
+  
 ];
 
 const levels2 = [
@@ -55,41 +28,15 @@ const levels2 = [
     subject: "MATHS",
     price: "$19",
   },
+  
   {
     id: 2,
     image: "/images/payment/level_11.png",
     title: "Level 2",
-    subject: "SCIENCE",
-    price: "$25",
-  },
-  {
-    id: 3,
-    image: "/images/payment/level_11.png",
-    title: "Level 2",
-    subject: "ENGLISH",
-    price: "$30",
-  },
-  {
-    id: 4,
-    image: "/images/payment/level_12.png",
-    title: "Level 2",
-    subject: "FRENCH",
-    price: "$19",
-  },
-  {
-    id: 5,
-    image: "/images/payment/level_12.png",
-    title: "Level 2",
-    subject: "FRENCH",
-    price: "$25",
-  },
-  {
-    id: 6,
-    image: "/images/payment/level_12.png",
-    title: "Level 2",
     subject: "FRENCH",
     price: "$30",
   },
+  
 ];
 export default function Welcome({setActiveSection}) {
   const [selectedLevel, setSelectedLevel] = useState(1);

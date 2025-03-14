@@ -6,13 +6,13 @@ import Image from "next/image";
 import { Select } from "antd";
 import { UserAuthContext } from "../contexts/auth-context";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 export const Header = () => {
   const { lng, setLng } = UserAuthContext();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLanguageChange = (language) => {
-    console.log(language,"language");
     setLng(language);
     setIsOpen(false);
   };
@@ -34,7 +34,8 @@ export const Header = () => {
 
   return (
     <div className="hidden md:flex flex-col sm:flex-row justify-between align-center items-center px-5">
-      <img width={110} height={110} src="/images/logo.svg" alt="Acces" />
+      <Link href="/home"> <img width={110} height={110} src="/images/logo.svg" alt="Acces" /></Link>
+      
       <div className="flex flex-row h-[60px] md:h-[50px] gap-3 pr-[50px] mb-5 md:mb-0 items-center">
         <div className="relative">
           <button

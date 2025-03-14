@@ -55,10 +55,19 @@ export const TopMenue = ({ setActiveSection }) => {
       </div>
 
       <div
-        className={`${
-          isOpen ? "flex" : "hidden"
-        } md:flex flex-col md:flex-row gap-5 md:gap-[50px] justify-center items-center md:items-center bg-black`}
+        className={`${isOpen ? "flex" : "hidden"
+          } md:flex flex-col md:flex-row gap-5 md:gap-[50px] justify-center items-center md:items-center bg-black`}
       >
+
+        <Link href="/" className="inline-block">
+          <button
+            onClick={() => setActiveSection("home")}
+            //
+            className="text-[18px] md:text-[26px] font-normal text-white cursor-pointer font-quicksand"
+          >
+            Home
+          </button>
+        </Link>
         <Link href="/quiz" className="inline-block">
           <button
             onClick={() => setActiveSection("quiz")}
@@ -85,7 +94,7 @@ export const TopMenue = ({ setActiveSection }) => {
             Products
           </button>
         </Link>
-        <button
+        {/* <button
           onClick={() => setActiveSection("quiz")}
           className="text-[18px] md:text-[26px] font-normal text-white cursor-pointer font-quicksand"
         >
@@ -93,7 +102,7 @@ export const TopMenue = ({ setActiveSection }) => {
         </button>
         <button className="text-[18px] md:text-[26px] font-normal text-white cursor-pointer font-quicksand">
           Contact Us
-        </button>
+        </button> */}
 
         {/* <button className="md:hidden text-[18px] md:text-[26px] font-normal text-white cursor-pointer font-quicksand">
           Free Trail
