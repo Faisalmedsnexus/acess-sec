@@ -5,12 +5,12 @@ const avatars = [
   "/images/choose-avatar/girl_11.png",
   "/images/choose-avatar/boy 16.png",
   "/images/choose-avatar/girl_13.png",
-  "/images/choose-avatar/boy_17.png", // Fixed: changed "boy 17.png" to "boy_17.png"
+  "/images/choose-avatar/boy_17.png", 
   "/images/choose-avatar/girl_14.png",
   "/images/choose-avatar/girl_15.png",
   "/images/choose-avatar/boy_13.png",
-  "/images/choose-avatar/Girl_08.png", // Fixed: changed "Girl 08.png" to "Girl_08.png"
-  "/images/choose-avatar/Boy_01.png", // Fixed: changed "Boy 01.png" to "Boy_01.png"
+  "/images/choose-avatar/Girl_08.png",
+  "/images/choose-avatar/Boy_01.png",
   "/images/choose-avatar/boy_11.png",
 ];
 export default function page() {

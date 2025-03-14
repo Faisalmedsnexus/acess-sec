@@ -10,8 +10,7 @@ export const Hero = ({ activeSection }) => {
   const { dictionaries } = DictionariesContext();
 
 
-  console.log(lng,"lng")
- console.log(activeSection, ": avtice")
+
   return (
     <div>
       <img src="/images/herosection_bgtop.png" alt="Farrukh" className="w-[100%]" />
@@ -36,22 +35,8 @@ export const Hero = ({ activeSection }) => {
                 Choose Your Favorite Avatar
               </h1>
             </div>
-            <div className="md:w-[45%] flex flex-col lg:flex-row gap-5 items-center">
-              <img
-                className="w-[145px] h-[160px]"
-                src="/images/choose-avatar/avatar1.png"
-                alt="Farrukh"
-              />
-              <img
-                className="w-[206px] h-[232px]"
-                src="/images/choose-avatar/avatar2.png"
-                alt="Farrukh"
-              />
-              <img
-                className="w-[301px] h-[330px]"
-                src="/images/choose-avatar/avatar3.png"
-                alt="Farrukh"
-              />
+            <div className="md:w-[30%]">
+              <img src="/images/hero_one.png" alt="Farrukh" className="" />
             </div>
           </>
         ) : activeSection == "access-simulator" ? (
