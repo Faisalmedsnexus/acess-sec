@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const avatars = [
   "/images/choose-avatar/girl_11.png",
-  "/images/choose-avatar/boy_14.png",
+  "/images/choose-avatar/boy 16.png",
   "/images/choose-avatar/girl_13.png",
   "/images/choose-avatar/boy_17.png", // Fixed: changed "boy 17.png" to "boy_17.png"
   "/images/choose-avatar/girl_14.png",
