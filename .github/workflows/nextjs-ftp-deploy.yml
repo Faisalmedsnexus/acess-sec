@@ -1,0 +1,53 @@
+name: Next.js CI/CD (FTP Deployment)
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - run: npm install
+      - run: npm run build
+      - run: npm run export
+
+      - name: Upload static site
+        uses: actions/upload-artifact@v4
+        with:
+          name: export-output
+          path: out/
+          retention-days: 1
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download static site
+        uses: actions/download-artifact@v4
+        with:
+          name: export-output
+          path: out/
+
+      - name: Deploy to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: "198.54.114.164"
+          username: "vacdoc@doctor.vaccinationcentre.com"
+          password: ${{ secrets.PROD_FTP_PASSWORD }}
+          port: 21
+          protocol: ftps
+          local-dir: out/
+          server-dir: /
+          state-name: "ftp-deploy-sync-state.json"
+          timeout: 120000
+          exclude: |
+            **/.git*
+            **/node_modules/**
