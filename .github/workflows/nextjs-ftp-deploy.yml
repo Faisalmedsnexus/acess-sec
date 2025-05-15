@@ -43,7 +43,7 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
           source: "out/*"
-          target: "/home/ec2-user/your-app-folder" # <-- Change this to your EC2 target folder
+          target: "/home/ec2-user/acess-sec" # <-- Change this to your EC2 target folder
 
       - name: (Optional) Run post-deploy commands on EC2
         uses: appleboy/ssh-action@v1.0.3
