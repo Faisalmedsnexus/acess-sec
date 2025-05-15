@@ -36,18 +36,21 @@ jobs:
           name: export-output
           path: out/
 
-      - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Copy files to EC2 via SSH
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: "198.54.114.164"
-          username: "vacdoc@doctor.vaccinationcentre.com"
-          password: ${{ secrets.PROD_FTP_PASSWORD }}
-          port: 21
-          protocol: ftps
-          local-dir: out/
-          server-dir: /
-          state-name: "ftp-deploy-sync-state.json"
-          timeout: 120000
-          exclude: |
-            **/.git*
-            **/node_modules/**
+          host: ec2-3-8-182-132.eu-west-2.compute.amazonaws.com
+          username: ec2-user
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: "out/*"
+          target: "/home/ec2-user/your-app-folder" # <-- Change this to your EC2 target folder
+
+      - name: (Optional) Run post-deploy commands on EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ec2-3-8-182-132.eu-west-2.compute.amazonaws.com
+          username: ec2-user
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd /home/ec2-user/your-app-folder
+            # Add any commands you want to run after deployment
