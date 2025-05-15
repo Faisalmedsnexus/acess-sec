@@ -1,50 +1,29 @@
-name: Next.js CI/CD (FTP Deployment)
+name: Next.js CI/CD (EC2 Deployment)
 
 on:
   push:
     branches: [master]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Use Node.js 20
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-
-      - run: npm install
-      - run: npm run build
-
-      - name: Upload static site
-        uses: actions/upload-artifact@v4
-        with:
-          name: export-output
-          path: out/
-          retention-days: 1
-
   deploy:
-    needs: build
     runs-on: ubuntu-latest
-    steps:
-      - name: Download static site
-        uses: actions/download-artifact@v4
-        with:
-          name: export-output
-          path: out/
 
-      - name: Copy files to EC2 via SSH
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Copy project to EC2
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ec2-3-8-182-132.eu-west-2.compute.amazonaws.com
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "out/*"
+          source: "."   # Send entire app
           target: "/home/ec2-user/acess-sec"
+          overwrite: true
+          strip_components: 1
 
-      - name: Run post-deploy commands on EC2
+      - name: Deploy on EC2
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ec2-3-8-182-132.eu-west-2.compute.amazonaws.com
@@ -52,6 +31,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ec2-user/acess-sec
-            pm2 delete nextjs-static || true
-            pm2 start npx --name nextjs-static -- serve -s . -l 3000
+            npm install
+            npm run build
+            pm2 restart next-app || pm2 start npm --name next-app -- start
             pm2 save
