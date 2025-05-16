@@ -75,7 +75,7 @@ export const Header = () => {
           )}
         </div>
         <button className="primary-btn bg-[#FE8840] text-white px-[60px] py-3 rounded-[25px] cursor-pointer transition">
-          Login321321
+          Login
         </button>
 
         <img src="/images/shopping_basket.png" alt="Acces" />
